@@ -7,6 +7,7 @@ def fetch_data():
 
 
 def minimum_goals_difference(data):
+    """Return name of team with minimum goals difference."""
     minimum = None
     for index, line in enumerate(data.splitlines()):
         if index == 0:
