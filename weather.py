@@ -25,7 +25,7 @@ def should_omit_line(index, line, dy):
 def generate_data(data):
     """Yield data fields."""
     for index, line in enumerate(data.splitlines()):
-        line = re.sub(' +', ' ', line).lstrip(' ')
+        line = re.sub(r' +', ' ', line).lstrip(' ')
         fields = line.split(' ')
         day_no = fields[0]
         if should_omit_line(index, line, day_no):
