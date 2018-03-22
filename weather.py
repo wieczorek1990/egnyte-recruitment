@@ -7,12 +7,12 @@ def fetch_data():
     return requests.get('http://codekata.com/data/04/weather.dat').text
 
 
-def should_omit_line(index, line, dy):
+def should_omit_line(index, line, day_no):
     """Decide whether the line should be skipped."""
     if index in (0, 1):
         # skip header
         return True
-    elif dy == 'mo':
+    elif day_no == 'mo':
         # skip summary
         return True
     elif line == '':
